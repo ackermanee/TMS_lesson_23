@@ -22,7 +22,7 @@ public class Main {
     private static Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
-        try {
+
             Scanner in = new Scanner(System.in);
 
             try(FileWriter writer = new FileWriter("Orders.txt"))
@@ -45,8 +45,5 @@ public class Main {
             catch(IOException ex){
                 logger.warn("Ошибка во время создания заказа: " + ex);
             }
-        }catch (Exception e){
-            logger.fatal("что-то пошло не так"  + e);
         }
     }
-}
